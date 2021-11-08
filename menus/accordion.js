@@ -1,3 +1,12 @@
 $(document).ready(function(){
-    $("div.wrap_answer").hide();
+    $("button.question").click(function(){
+        if($(this).next().hasClass("on")){
+            $("div.on").hide();
+            $(this).next().removeClass("on");
+        }
+        else{
+            $(this).next().addClass("on");
+            $("div.on").show();
+        }
+    })
 })
